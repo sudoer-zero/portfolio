@@ -1,3 +1,13 @@
-from django.shortcuts import render
+from .models import Message
+from .serializers import MessageSerializer
+from rest_framework import mixins
+from rest_framework import generics
 
-# Create your views here.
+
+class MessagePost(mixins.ListModelMixin,
+                  mixins.CreateModelMixin,
+                  generics.GenericAPIView):
+    serializer_class = MessageSerializer
+
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
