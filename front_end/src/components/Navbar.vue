@@ -1,21 +1,23 @@
 <template>
   <div class="w-5/6 mx-auto py-4 border-b-2 border-slate-300">
     <div class="grid grid-cols-2 mx-4">
-      <div class="col-span-1">
-        <img class="w-40" src="../assets/logo.svg" alt="logo">
+      <div class="col-span-2 justify-self-center md:justify-self-start md:col-span-1">
+        <router-link to="/">
+          <img class="w-40" src="../assets/logo.svg" alt="logo">
+        </router-link>
       </div>
-      <div class="col-span-1 font-display justify-self-end pt-3">
+      <div class="col-span-2 md:col-span-1 font-display justify-self-center md:justify-self-end pt-3">
         <span class="px-4">
-          <router-link to="">APPS</router-link>
+          <router-link to="/apps">APPS</router-link>
         </span>
         <span class="px-4">
-          <router-link to="">LOGOS</router-link>
+          <router-link to="/logos">LOGOS</router-link>
         </span>
         <span class="px-4">
-          <router-link to="">BLOG</router-link>
+          <router-link to="/blog">BLOG</router-link>
         </span>
         <span class="px-4">
-          <router-link to="">ABOUT</router-link>
+          <router-link to="/about">ABOUT</router-link>
         </span>
       </div>
     </div>
