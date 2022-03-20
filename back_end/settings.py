@@ -41,10 +41,12 @@ INSTALLED_APPS = [
     # 3rd party apps
     'rest_framework',
     'corsheaders',
+    'taggit',
 
     # Local apps
     'contact',
     'users',
+    'blogs',
 ]
 
 MIDDLEWARE = [
@@ -130,6 +132,7 @@ REST_FRAMEWORK = {
 }
 
 # CORS Settings
+CORS_ALLOWED_ORIGIN = ["*"]
 CORS_ORIGIN_ALLOW_ALL = True
 
 
