@@ -42,11 +42,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'taggit',
+    'tailwind',
 
     # Local apps
     'contact',
     'users',
     'blogs',
+    'theme',
 ]
 
 MIDDLEWARE = [
@@ -135,6 +137,8 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGIN = ["*"]
 CORS_ORIGIN_ALLOW_ALL = True
 
+# Tailwind Configs
+TAILWIND_APP_NAME = 'theme'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
