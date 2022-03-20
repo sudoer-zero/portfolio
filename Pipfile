@@ -7,6 +7,13 @@ name = "pypi"
 django = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
+djangorestframework-simplejwt = "*"
+django-autoslug = "*"
+pillow = "*"
+ai-django-core = "*"
+crispy-tailwind = "*"
+django-taggit = "*"
+django-tailwind = "*"
 
 [dev-packages]
 
