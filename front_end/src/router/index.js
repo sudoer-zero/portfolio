@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ThanksView from '../views/ThanksView'
+import Fun from '../views/Fun'
 
 const routes = [
   {
@@ -21,6 +22,12 @@ const routes = [
     name: 'Thanks',
     component: ThanksView
   },
+  {
+    path: '/fun',
+    name: 'Fun',
+    component: Fun
+  },
+  
 ]
 
 const router = createRouter({
