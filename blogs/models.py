@@ -9,8 +9,10 @@ from autoslug import AutoSlugField
 from ai_django_core.models import CommonInfo
 from taggit.managers import TaggableManager
 
+localhost = 'http://127.0.0.1:8000'
 
-class Article(models.Model):
+
+class Article(CommonInfo, models.Model):
     title = models.CharField(max_length=200)
     slug = AutoSlugField(populate_from='title', unique_with='description')
     description = models.CharField(max_length=300, blank=True)
@@ -22,8 +24,14 @@ class Article(models.Model):
     happy = models.PositiveSmallIntegerField(default=0)
     tags = TaggableManager()
 
+    def __str__(self):
+        return self.title
+
     def get_absolute_url(self):
         return f'/{self.slug}/'
+
+    def creation_date(self):
+        return self.created_at.strftime('%b %d, %y')
 
     def get_image(self):
         if self.image:
