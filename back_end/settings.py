@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'taggit',
     'tailwind',
+    'crispy_forms',
+    'crispy_tailwind',
 
     # Local apps
     'contact',
@@ -140,7 +142,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 # Tailwind Configs
 TAILWIND_APP_NAME = 'theme'
-
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'tailwind'
+CRISPY_TEMPLATE_PACK = 'tailwind'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
