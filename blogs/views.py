@@ -36,7 +36,8 @@ class ArticleDetailView(APIView):
 class RandomArticle(ListAPIView):
 
     def get_queryset(self):
-        random_id = random.randint(1, Article.objects.all().count())
+        ids_list = list(Article.objects.all().values_list('id', flat=True))
+        random_id = random.choice(ids_list)
         return Article.objects.all().filter(id=random_id)
     serializer_class = ArticleSerializer
 
