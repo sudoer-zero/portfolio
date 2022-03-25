@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+import random
 from rest_framework.generics import ListAPIView, get_object_or_404
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -32,6 +32,15 @@ class ArticleDetailView(APIView):
         return Response(serializer.data)
 
 
+# Return just one latest Article
+class RandomArticle(ListAPIView):
+
+    def get_queryset(self):
+        random_id = random.randint(1, Article.objects.all().count())
+        return Article.objects.all().filter(id=random_id)
+    serializer_class = ArticleSerializer
+
+
 class LatestArticlesList(ListAPIView):
     queryset = Article.objects.all()[0:3]
     serializer_class = ArticleSerializer
@@ -57,7 +66,6 @@ def article_like(request, pk):
         'success': True
     }
     return Response(data)
-
 
 
 @api_view(['POST'])
