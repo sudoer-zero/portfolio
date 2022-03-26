@@ -1,6 +1,8 @@
 <template>
+<div class="bg-first h-full">
   <Navbar/>
   <router-view/>
+</div>
 </template>
 
 <script>
