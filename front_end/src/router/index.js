@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ThanksView from '../views/ThanksView'
 import Fun from '../views/Fun'
+import ArticlesList from '../views/blogs/ArticlesList'
+import ArticleDetail from '../views/blogs/ArticleDetail'
 
 const routes = [
   {
@@ -27,7 +29,16 @@ const routes = [
     name: 'Fun',
     component: Fun
   },
-  
+  {
+    path: '/:article_slug',
+    name: 'ArticleDetail',
+    component: ArticleDetail
+  },
+  {
+    path: '/blogs',
+    name: 'blogs',
+    component: ArticlesList
+  },
 ]
 
 const router = createRouter({
