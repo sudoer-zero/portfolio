@@ -1,8 +1,6 @@
 <template>
-<div class="bg-first h-full">
   <Navbar/>
   <router-view/>
-</div>
 </template>
 
 <script>
@@ -14,3 +12,8 @@ export default {
   }
 }
 </script>
+<style>
+#app {
+  background-color: #F6F5F5;
+}
+</style>
