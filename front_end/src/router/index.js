@@ -4,6 +4,7 @@ import ThanksView from '../views/ThanksView'
 import Fun from '../views/Fun'
 import ArticlesList from '../views/blogs/ArticlesList'
 import ArticleDetail from '../views/blogs/ArticleDetail'
+import LogosList from '../views/logos/LogosList'
 
 const routes = [
   {
@@ -39,6 +40,11 @@ const routes = [
     name: 'blogs',
     component: ArticlesList
   },
+  {
+    path: '/logos',
+    name: 'logos',
+    component: LogosList
+  }
 ]
 
 const router = createRouter({
