@@ -1,13 +1,13 @@
 <template>
-  <div class="font-display px-2 md:px-5 text-first bg-third">
-    <div class="w-5/6 mx-auto font-semibold">
-      <form v-on:submit.prevent="onSubmit" class="py-5 px-2 md:px-10">
+  <div id="bg" class="font-display px-2 md:px-5 text-first bg-third">
+    <div class="w-11/12 md:w-5/6 mx-auto font-semibold">
+      <form v-on:submit.prevent="onSubmit" class="py-5 px-2 md:px-10 text-fourth">
         <div class="grid grid-cols-2 gap-2">
           <div class="col-span-2 md:col-span-1">
-            <label class="uppercase text-sm opacity-90 px-2">Name</label>
             <input
               v-model="name"
               type="text"
+              placeholder="NAME"
               class="
                 text-third
                 font-semibold
@@ -15,7 +15,7 @@
                 mt-2
                 mb-4
                 w-full
-                bg-slate-200
+                bg-first
                 border-2 border-first
                 focus:border-third focus:outline-none
                 rounded
@@ -23,10 +23,10 @@
             />
           </div>
           <div class="col-span-2 md:col-span-1">
-            <label class="uppercase text-sm opacity-90 px-2">Email</label>
             <input
               v-model="email"
               type="email"
+              placeholder="E-MAIL"
               class="
                 text-third
                 font-semibold
@@ -34,7 +34,7 @@
                 mt-2
                 mb-4
                 w-full
-                bg-slate-200
+                bg-first
                 border-2 border-first
                 focus:border-third focus:outline-none
                 rounded
@@ -43,10 +43,10 @@
           </div>
         </div>
         <div>
-          <label class="uppercase text-sm opacity-90 px-2">Message</label>
           <textarea
             v-model="message"
             name="message"
+            placeholder="MESSAGE"
             class="
               text-third
               font-semibold
@@ -70,7 +70,6 @@
             font-semibold
             p-3
             mt-2
-            mb-4
             w-full
             bg-fourth
             border-2 border-first
@@ -122,3 +121,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+#bg {
+  background-image: url("../../public/bg.svg");
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
   <div class="w-11/12 md:w-5/6 mx-auto">
     <div class="grid grid-cols-4 gap-4 mx-4">
-      <div class="col-span-4 md:col-span-3">
+      <div class="col-span-4 lg:col-span-3">
         <h1 class="mx-0 md:mx-2 text-6xl font-display font-semibold text-third">
           Articles
         </h1>
@@ -11,15 +11,15 @@
           :article="article"
         />
       </div>
-      <div class="col-span-4 md:col-span-1">
+      <div class="col-span-4 lg:col-span-1">
         <h1
-          class="font-display font-semibold text-third border-b-2 border-first"
+          class="font-display font-semibold text-third text-2xl lg:text-lg"
         >
           Recent Logos
         </h1>
-        <div>
+        <div class="grid md:grid-cols-3 lg:grid-cols-1">
           <LogoBox
-            class="w-11/12 md:w-3/4"
+            class="w-11/12 md:w-3/4 mx-auto"
             v-for="logo in logos"
             :key="logo.id"
             :logo="logo"
