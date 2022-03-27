@@ -15,8 +15,17 @@
         <h1
           class="font-display font-semibold text-third border-b-2 border-first"
         >
-          Recent Articles
+          Recent Logos
         </h1>
+        <div>
+          <LogoBox
+            class="w-11/12 md:w-3/4"
+            v-for="logo in logos"
+            :key="logo.id"
+            :logo="logo"
+          >
+          </LogoBox>
+        </div>
       </div>
     </div>
   </div>
@@ -25,23 +34,26 @@
 <script>
 import axios from "axios";
 import ArticleBox from "@/components/ArticleBox.vue";
-
+import LogoBox from "@/components/LogoBox.vue";
 export default {
   name: "ArticleList",
 
   data() {
     return {
       articles: [],
+      logos: [],
       isLoading: true,
     };
   },
 
   components: {
     ArticleBox,
+    LogoBox,
   },
 
   mounted() {
     this.getArticles();
+    this.getLogos();
     document.title = "Sudoer | Blogs";
   },
 
@@ -52,6 +64,16 @@ export default {
         .then((response) => {
           this.articles = response.data;
           this.isLoading = false;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+    async getLogos() {
+      await axios
+        .get("/logos/")
+        .then((response) => {
+          this.logos = response.data;
         })
         .catch((error) => {
           console.log(error);
