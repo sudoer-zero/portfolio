@@ -17,3 +17,14 @@ class LogoListView(APIView):
         logos = Logo.objects.all()
         serializer = LogoSerializer(logos, many=True)
         return Response(serializer.data)
+
+
+@api_view(['POST'])
+def logo_star(request, pk):
+    logo = get_object_or_404(Logo, pk=pk)
+    logo.star += 1
+    logo.save()
+    data = {
+        'success': True
+    }
+    return Response(data)
