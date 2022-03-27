@@ -1,5 +1,5 @@
 <template>
-  <div class="shadow rounded p-2 my-4">
+  <div class="shadow rounded p-2 my-4 bg-first">
     <div class="flex justify-between font-display mx-0 md:mx-2 text-third">
       <div>
         <h1 class="text-3xl md:text-4xl hover:text-fourth">

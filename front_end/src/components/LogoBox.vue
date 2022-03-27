@@ -1,5 +1,5 @@
 <template>
-  <div class="m-4 rounded text-third shadow-lg">
+  <div class="m-4 rounded text-third shadow-lg bg-first">
     <div class="">
       <img
         :src="logo.get_thumbnail"
