@@ -9,7 +9,7 @@ from autoslug import AutoSlugField
 from ai_django_core.models import CommonInfo
 from taggit.managers import TaggableManager
 
-localhost = 'https://sudoer.pythonanywhere.com'
+from back_end.settings import localhost
 
 
 class Article(CommonInfo, models.Model):

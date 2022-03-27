@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-=c#%^kw3_5nxpw*arxhq2l+yp$6siz!xe3e%!_a0^!^i23^8)k
 DEBUG = True
 
 ALLOWED_HOSTS = ['sudoer.pythonanywhere.com', '127.0.0.1']
-
+# localhost = 'http://127.0.0.1:8000'
+localhost = 'https://sudoer.pythonanywhere.com'
 
 # Application definition
 
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
     'contact',
     'users',
     'blogs',
+    'logos',
     'theme',
 ]
 
