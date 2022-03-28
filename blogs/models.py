@@ -24,6 +24,9 @@ class Article(CommonInfo, models.Model):
     happy = models.PositiveSmallIntegerField(default=0)
     tags = TaggableManager()
 
+    class Meta:
+        ordering = ['-created_at']
+
     def __str__(self):
         return self.title
 
