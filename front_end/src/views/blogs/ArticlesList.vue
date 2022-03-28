@@ -1,5 +1,6 @@
 <template>
-  <div class="w-11/12 md:w-5/6 mx-auto">
+  <Loading :isLoading="isLoading" />
+  <div v-show="!isLoading" class="w-11/12 md:w-5/6 mx-auto">
     <div class="grid grid-cols-4 gap-4 mx-4">
       <div class="col-span-4 lg:col-span-3">
         <h1 class="mx-0 md:mx-2 text-6xl font-display font-semibold text-third">
@@ -12,9 +13,7 @@
         />
       </div>
       <div class="col-span-4 lg:col-span-1">
-        <h1
-          class="font-display font-semibold text-third text-2xl lg:text-lg"
-        >
+        <h1 class="font-display font-semibold text-third text-2xl lg:text-lg">
           Recent Logos
         </h1>
         <div class="grid md:grid-cols-3 lg:grid-cols-1">
@@ -35,6 +34,7 @@
 import axios from "axios";
 import ArticleBox from "@/components/ArticleBox.vue";
 import LogoBox from "@/components/LogoBox.vue";
+import Loading from "@/components/Loading.vue";
 export default {
   name: "ArticleList",
 
@@ -49,6 +49,7 @@ export default {
   components: {
     ArticleBox,
     LogoBox,
+    Loading,
   },
 
   mounted() {
@@ -71,7 +72,7 @@ export default {
     },
     async getLogos() {
       await axios
-        .get("/logos/")
+        .get("/logos/latest-logos/")
         .then((response) => {
           this.logos = response.data;
         })

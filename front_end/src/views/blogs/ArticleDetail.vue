@@ -1,5 +1,6 @@
 <template>
-  <div class="w-11/12 md:w-5/6 mx-auto text-third">
+  <Loading :isLoading="isLoading" />
+  <div v-show="!isLoading" class="w-11/12 md:w-5/6 mx-auto text-third">
     <div class="grid grid-cols-4 gap-4 mx-4">
       <div class="col-span-4 md:col-span-3">
         <h1
@@ -136,6 +137,7 @@
 </template>
 
 <script>
+import Loading from "@/components/Loading.vue";
 import axios from "axios";
 export default {
   name: "ArticleDetail",
@@ -151,7 +153,12 @@ export default {
       heart: "",
       happy: "",
       creation_date: "",
+      isLoading: true,
     };
+  },
+
+  components: {
+    Loading
   },
 
   mounted() {
@@ -174,6 +181,7 @@ export default {
           this.heart = response.data.heart;
           this.happy = response.data.happy;
           this.creation_date = response.data.creation_date;
+          this.isLoading = false;
         })
         .catch((error) => {
           console.log(error);
