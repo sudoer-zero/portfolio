@@ -1,6 +1,5 @@
 from django.core.files import File
 from django.db import models
-from django.urls import reverse
 
 from io import BytesIO
 from PIL import Image
@@ -11,22 +10,7 @@ from ai_django_core.models import CommonInfo
 from back_end.settings import localhost
 
 
-class Logo(CommonInfo, models.Model):
-    client = models.CharField(max_length=200)
-    slug = AutoSlugField(populate_from='client', unique_with='description')
-    description = models.CharField(max_length=300, blank=True)
-    image = models.ImageField(upload_to='uploads/logos', blank=True, null=True)
-    thumbnail = models.ImageField(upload_to='uploads/logos/thumbnails/', blank=True, null=True)
-    star = models.PositiveSmallIntegerField(default=0)
-
-    def __str__(self):
-        return self.client
-
-    def get_absolute_url(self):
-        return f'/{self.slug}/'
-
-    def creation_date(self):
-        return self.created_at.strftime('%b %d, %y')
+class ImagePros:
 
     def get_image(self):
         if self.image:
@@ -56,4 +40,34 @@ class Logo(CommonInfo, models.Model):
         thumbnail = File(thumb_io, name=image.name)
 
         return thumbnail
+
+
+class Logo(CommonInfo, ImagePros, models.Model):
+    client = models.CharField(max_length=200)
+    slug = AutoSlugField(populate_from='client', unique_with='description')
+    description = models.CharField(max_length=300, blank=True)
+    image = models.ImageField(upload_to='uploads/logos', blank=True, null=True)
+    thumbnail = models.ImageField(upload_to='uploads/logos/thumbnails/', blank=True, null=True)
+    star = models.PositiveSmallIntegerField(default=0)
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return self.client
+
+    def get_absolute_url(self):
+        return f'/{self.slug}/'
+
+    def creation_date(self):
+        return self.created_at.strftime('%b %d, %y')
+
+
+class RandomImage(CommonInfo, ImagePros, models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='uploads/logos', blank=True, null=True)
+    thumbnail = models.ImageField(upload_to='uploads/logos/thumbnails/', blank=True, null=True)
+
+    class Meta:
+        ordering = ['-created_at']
 
