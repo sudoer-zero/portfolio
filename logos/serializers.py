@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Logo
+from .models import Logo, RandomImage
 
 
 class LogoSerializer(serializers.ModelSerializer):
@@ -17,4 +17,16 @@ class LogoSerializer(serializers.ModelSerializer):
             'get_image',
             'get_thumbnail',
             'get_absolute_url'
+        ]
+
+
+class RandomImageSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = RandomImage
+        fields = [
+            'id',
+            'title',
+            'get_image',
+            'get_thumbnail'
         ]
