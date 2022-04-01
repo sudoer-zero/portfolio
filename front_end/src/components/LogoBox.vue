@@ -1,5 +1,5 @@
 <template>
-  <div class="m-4 rounded text-third shadow-lg bg-first">
+  <div class="m-0 md:m-4 rounded text-third shadow-lg bg-first">
     <div class="">
       <img
         :src="logo.get_thumbnail"
@@ -8,7 +8,7 @@
       />
     </div>
     <div class="flex justify-between py-2 px-3">
-      <p class="font-display font-semibold text-lg">{{ logo.client }}</p>
+      <p class="font-display font-semibold text-base my-1 md:text-lg">{{ logo.client }}</p>
       <button
         @click="postStar"
         class="flex hover:bg-fourth bg-first rounded-md px-1 mx-1"
