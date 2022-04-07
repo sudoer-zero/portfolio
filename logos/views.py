@@ -17,7 +17,7 @@ class LogoListView(APIView):
 
 
 class LatestLogosList(ListAPIView):
-    queryset = Logo.objects.all()[0:3]
+    queryset = Logo.objects.all()[0:4]
     serializer_class = LogoSerializer
 
 
