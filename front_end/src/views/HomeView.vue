@@ -15,6 +15,10 @@ export default {
     Contact,
     RandomArtilce,
     Hero,
+  },
+
+  mounted() {
+    document.title = "Sudoer | Home";
   }
 }
 </script>

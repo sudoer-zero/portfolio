@@ -96,7 +96,6 @@ export default {
 
   mounted() {
     this.getArticles();
-    document.title = "Sudoer | Blogs";
   },
 
   methods: {
