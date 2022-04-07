@@ -1,17 +1,19 @@
 <template>
   <div class="m-0 md:m-4 rounded text-third shadow-lg bg-first">
     <div class="">
+      <router-link :to="logo.get_absolute_url">
       <img
         :src="logo.get_thumbnail"
         :alt="logo.client"
         class="object-cover w-full h-full"
       />
+      </router-link>
     </div>
     <div class="flex justify-between py-2 px-3">
       <p class="font-display font-semibold text-base my-1 md:text-lg">{{ logo.client }}</p>
       <button
         @click="postStar"
-        class="flex hover:bg-fourth bg-first rounded-md px-1 mx-1"
+        class="flex hover:bg-fourth bg-first rounded-md md:px-1 md:mx-1"
       >
         <span class="p-1">
           <svg

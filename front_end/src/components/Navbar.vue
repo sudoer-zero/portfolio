@@ -8,7 +8,7 @@
       </div>
       <div class="col-span-2 md:col-span-1 font-display justify-self-center md:justify-self-end pt-3 text-third font-semibold">
         <span class="px-4">
-          <router-link to="/apps">APPS</router-link>
+          <router-link to="/work">WORK</router-link>
         </span>
         <span class="px-4">
           <router-link to="/logos">LOGOS</router-link>

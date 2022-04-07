@@ -1,5 +1,5 @@
 <template>
-  <div id="bg" class="font-display px-2 md:px-5 text-first bg-third">
+  <div id="bg" class="font-display px-2 md:px-5 text-first bg-third my-5 md:my-10">
     <div class="w-11/12 md:w-5/6 mx-auto font-semibold">
       <form v-on:submit.prevent="onSubmit" class="py-5 px-2 md:px-10 text-fourth">
         <div class="grid grid-cols-2 gap-2">
