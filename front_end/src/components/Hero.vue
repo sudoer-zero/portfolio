@@ -1,5 +1,5 @@
 <template>
-  <div id="bg" class="my-10">
+  <div class="my-10">
     <div class="w-11/12 md:w-2/3 ls:w-1/2 mx-auto text-third text-5xl md:text-7xl lg:text-8xl font-display font-semibold uppercase">
       <h1 class="border-b-4 border-fourth w-fit">Developer</h1>
       <h1 class="border-b-4 border-fourth w-fit">Logo Designer</h1>
@@ -103,9 +103,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-#bg {
-  background-image: url("../../public/bg.svg");
-}
-</style>
