@@ -46,8 +46,8 @@
           </div>
         </div>
         <div class="flex-row md:flex justify-between">
-          <div class="w-fit md:w-3/4 my-2 md:m-4 font-paragraph text-lg">
-            <p>{{ content }}</p>
+          <div class="w-fit md:w-3/4 my-2 md:m-4">
+            <Markdown :source="content" />
           </div>
           <div class="flex md:flex-col justify-around md:justify-start my-2">
             <button
@@ -131,6 +131,7 @@
         >
           Recent Articles
         </h1>
+        <LatestArticles/>
       </div>
     </div>
   </div>
@@ -138,6 +139,9 @@
 
 <script>
 import Loading from "@/components/Loading.vue";
+import LatestArticles from "@/components/LatestArticles.vue";
+import Markdown from 'vue3-markdown-it';
+
 import axios from "axios";
 export default {
   name: "ArticleDetail",
@@ -158,7 +162,9 @@ export default {
   },
 
   components: {
-    Loading
+    Loading,
+    LatestArticles,
+    Markdown
   },
 
   mounted() {
