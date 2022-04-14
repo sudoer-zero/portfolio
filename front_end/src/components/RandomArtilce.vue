@@ -27,7 +27,7 @@
             </h1>
           </div>
           <div class="my-2 md:my-5 mx-2">
-            <p class="text-xl font-paragraph">{{ article.description }}</p>
+            <p class="text-xl">{{ article.description }}</p>
           </div>
           <div class="flex justify-center md:justify-start">
             <div

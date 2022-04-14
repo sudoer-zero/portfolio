@@ -7,7 +7,7 @@
             {{ article.title }}
           </router-link>
         </h1>
-        <p class="text-third font-paragraph my-1">{{ article.description }}</p>
+        <p class="text-third my-1">{{ article.description }}</p>
         <p class="flex">
           <span
             class="flex font-semibold mx-1 md:mx-2 px-1 md:px-2"
