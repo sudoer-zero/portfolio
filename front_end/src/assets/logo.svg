@@ -1,1 +1,43 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.5 100"><defs><style>.cls-1{fill:#1697f6;}.cls-2{fill:#7bc6ff;}.cls-3{fill:#1867c0;}.cls-4{fill:#aeddff;}</style></defs><title>Artboard 46</title><polyline class="cls-1" points="43.75 0 23.31 0 43.75 48.32"/><polygon class="cls-2" points="43.75 62.5 43.75 100 0 14.58 22.92 14.58 43.75 62.5"/><polyline class="cls-3" points="43.75 0 64.19 0 43.75 48.32"/><polygon class="cls-4" points="64.58 14.58 87.5 14.58 43.75 100 43.75 62.5 64.58 14.58"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg17599"
+   width="100"
+   height="100"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs17603" />
+  <sodipodi:namedview
+     id="namedview17601"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0" />
+  <inkscape:clipboard
+     style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ee6f57;fill-opacity:1;stroke-width:2.65732298;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+     min="-15753.208,14656.808"
+     max="-15653.208,14756.808"
+     geom-min="-15753.208,14656.808"
+     geom-max="-15653.208,14756.808" />
+  <g
+     id="g17605"
+     transform="matrix(3.7795275,0,0,3.7795275,15753.208,-14656.808)">
+    <g
+       aria-label="SZ"
+       id="text4445"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Alien League';-inkscape-font-specification:'Alien League, Normal';fill:#ee6f57;fill-opacity:1;stroke-width:0.264583"
+       transform="matrix(0.29997328,0,0,0.29997328,-2890.0928,2733.8523)">
+      <path
+         id="path6732"
+         style="fill:#ee6f57;fill-opacity:1;stroke-width:2.34382"
+         d="m -4234.1237,3822.8411 c -2.1668,0.122 -3.7236,0.9154 -4.6697,2.3808 -0.9154,1.4642 -1.3721,3.1736 -1.3721,5.1265 v 2.9308 19.4091 c 0,4.1503 1.5868,6.2252 4.761,6.2252 h 8.2394 c 2.658,0.062 3.9395,1.5267 3.845,4.395 l 0.1414,20.6911 c 0,1.8315 -0.4261,3.2963 -1.2802,4.395 -0.8547,1.0982 -2.1825,1.6482 -3.9833,1.6482 h -4.4863 c -1.7677,0 -2.8971,-0.5194 -3.3877,-1.5568 -0.4899,-1.0375 -0.7352,-2.5629 -0.7352,-4.5765 v -12.9103 h -3.2036 v 15.3813 c -0.061,1.7088 0.3961,3.2656 1.3728,4.6697 0.9767,1.4016 2.1362,2.1649 3.479,2.2888 h 9.7048 c 2.1668,-0.122 3.708,-0.916 4.6234,-2.3808 0.9461,-1.4648 1.4185,-3.1736 1.4185,-5.1265 v -2.9308 -23.2553 c 0,-2.9296 -1.1588,-4.3944 -3.4777,-4.3944 h -9.7061 c -2.5629,0 -3.845,-1.4041 -3.845,-4.2117 l -0.045,-2.929 0.088,-15.9313 c 0,-1.8308 0.2903,-3.295 0.8684,-4.3937 0.6107,-1.0988 1.4648,-1.6482 2.563,-1.6482 h 6.3172 c 1.7682,0 2.8977,0.5194 3.3876,1.5568 0.4899,1.0375 0.7358,2.5636 0.7358,4.5777 v 12.9079 h 3.2043 v -15.3801 c 0.061,-1.7088 -0.3053,-3.2656 -1.0987,-4.6697 -0.7935,-1.4016 -2.0443,-2.1649 -3.7531,-2.2888 z m 21.5127,0 v 3.2962 h 11.9023 5.1265 l -16.8454,63.9055 v 3.2962 h 6.0418 14.4659 v -3.2962 h -7.2332 -9.7962 l 17.0294,-63.9055 v -3.2962 h -6.0419 -9.706 z m -36.9876,-8.8522 h 67.0169 c 5.8683,0 10.5927,4.7243 10.5927,10.5927 v 67.0169 c 0,5.8684 -4.7244,10.5927 -10.5927,10.5927 h -67.0169 c -5.8684,0 -10.5927,-4.7243 -10.5927,-10.5927 v -67.0169 c 0,-5.8684 4.7243,-10.5927 10.5927,-10.5927 z" />
+    </g>
+  </g>
+</svg>

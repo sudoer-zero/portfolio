@@ -1,62 +1,51 @@
 <template>
-  <v-app-bar
-      app
-      color="primary"
-      
-    >
-      <div class="d-flex align-center">
+  <v-app-bar app>
+    <div class="d-flex align-center">
+      <!-- Website Logo -->
+      <router-link to="/">
         <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="../assets/logo.svg"
           transition="scale-transition"
-          width="40"
+          width="50"
         />
+      </router-link>
+      <h1 class="font-weight-light shrink hidden-sm-and-down dark">
+        Sudoer Zero
+      </h1>
+    </div>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down dark"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+    <v-spacer></v-spacer>
 
-      <v-spacer></v-spacer>
+    <div>
+      <!-- Links -->
+      <v-btn small depressed class="mx-1" to="/work">Work</v-btn>
+      <v-btn small depressed class="mx-1" to="/logo">Logo</v-btn>
+      <v-btn small depressed class="mx-1" to="/blog">Blog</v-btn>
 
-       <v-btn icon v-if="!$vuetify.theme.dark" @click="toggleTheme()">
-        <v-icon class="mr-1" color="blue-grey darken-4">mdi-moon-waxing-crescent</v-icon>
+      <!-- Dark mode toggle button -->
+      <v-btn icon v-if="!$vuetify.theme.dark" @click="toggleTheme()">
+        <v-icon class="mr-1" color="blue-grey darken-4"
+          >mdi-moon-waxing-crescent</v-icon
+        >
       </v-btn>
       <v-btn icon v-if="$vuetify.theme.dark" @click="toggleTheme()">
         <v-icon color="yellow darken-3">mdi-white-balance-sunny</v-icon>
       </v-btn>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
+    </div>
+  </v-app-bar>
 </template>
 
 <script>
 export default {
-  name: 'Nav-bar',
+  name: "Nav-bar",
 
   methods: {
-     toggleTheme() {
+    toggleTheme() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-    }
-  }
-
-}
+    },
+  },
+};
 </script>
-
-<style>
-
-</style>
