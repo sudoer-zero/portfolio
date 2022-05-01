@@ -1,33 +1,62 @@
 <template>
-  <div id="nav" class="w-11/12 md:w-5/6 mx-auto py-2 md:py-5">
-    <div class="grid grid-cols-2 mx-0 md:mx-4 p-2 md:p-4 rounded shadow-lg border-2 border-fourth">
-      <div class="col-span-2 justify-self-center md:justify-self-start md:col-span-1">
-        <router-link to="/">
-          <img class="w-40" src="../assets/logo.svg" alt="logo">
-        </router-link>
+  <v-app-bar
+      app
+      color="primary"
+      
+    >
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
+
+        <v-img
+          alt="Vuetify Name"
+          class="shrink mt-1 hidden-sm-and-down dark"
+          contain
+          min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          width="100"
+        />
       </div>
-      <div class="col-span-2 md:col-span-1 font-display justify-self-center md:justify-self-end pt-3 text-third font-semibold">
-        <span class="px-4">
-          <router-link to="/work">WORK</router-link>
-        </span>
-        <span class="px-4">
-          <router-link to="/logos">LOGOS</router-link>
-        </span>
-        <span class="px-4">
-          <router-link to="/blogs">BLOGS</router-link>
-        </span>
-        <span class="px-4">
-          <router-link to="/about">ABOUT</router-link>
-        </span>
-      </div>
-    </div>
-  </div>
+
+      <v-spacer></v-spacer>
+
+       <v-btn icon v-if="!$vuetify.theme.dark" @click="toggleTheme()">
+        <v-icon class="mr-1" color="blue-grey darken-4">mdi-moon-waxing-crescent</v-icon>
+      </v-btn>
+      <v-btn icon v-if="$vuetify.theme.dark" @click="toggleTheme()">
+        <v-icon color="yellow darken-3">mdi-white-balance-sunny</v-icon>
+      </v-btn>
+
+      <v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Latest Release</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
 </template>
+
+<script>
+export default {
+  name: 'Nav-bar',
+
+  methods: {
+     toggleTheme() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+    }
+  }
+
+}
+</script>
+
 <style>
-#nav a {
-  color: #00334E;
-}
-#nav a.router-link-exact-active {
-  color: #EE6F57;
-}
+
 </style>

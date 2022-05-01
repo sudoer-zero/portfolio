@@ -1,14 +1,13 @@
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
 import './registerServiceWorker'
-import axios from 'axios'
-import VueAxios from 'vue-axios'
 import router from './router'
-import './index.css'
-import Markdown from 'vue3-markdown-it';
-import 'highlight.js/styles/monokai.css';
+import vuetify from './plugins/vuetify'
 
-axios.defaults.baseURL = 'https://sudoer.pythonanywhere.com/';
+Vue.config.productionTip = false
 
-
-createApp(App).use(router, VueAxios, axios, Markdown).mount('#app')
+new Vue({
+  router,
+  vuetify,
+  render: h => h(App)
+}).$mount('#app')
