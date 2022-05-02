@@ -1,21 +1,19 @@
 <template>
   <v-app>
-    <Navbar/>
-    <h1 class="py-40">Testing Dark mode</h1>
-    <v-toolbar-title>Collapsing Bar</v-toolbar-title>
-
+    <Navbar />
     <v-main>
-      <router-view/>
+      <router-view />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Navbar from "./components/Navbar.vue";
-export default {
-  name: 'App',
+import Navbar from "@/components/Navbar.vue";
 
-  components:{
+export default {
+  name: "App",
+
+  components: {
     Navbar,
   },
 
