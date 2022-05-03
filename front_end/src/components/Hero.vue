@@ -2,9 +2,9 @@
   <v-parallax dark src="../assets/img/hero-banner.jpg">
     <v-row align="center" justify="center">
       <v-col class="text-center" cols="12">
-        <h1 class="text-h4 font-weight-light mb-4">DEVELOPER</h1>
-        <h1 class="text-h4 font-weight-light mb-4">LOGO DESIGNER</h1>
-        <h1 class="text-h4 font-weight-light mb-4">TECH ENTHUSIAST</h1>
+        <h1 class="text-h4 text-md-h2 font-weight-light mb-4">DEVELOPER</h1>
+        <h1 class="text-h4 text-md-h2 font-weight-light mb-4">LOGO DESIGNER</h1>
+        <h1 class="text-h4 text-md-h2 font-weight-light mb-4">TECH ENTHUSIAST</h1>
         <div>
           <v-btn
             href="https://github.com/sudoer-zero"
