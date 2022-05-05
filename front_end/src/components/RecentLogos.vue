@@ -19,7 +19,7 @@
     </v-row>
     <v-parallax
       class="px-0"
-      height="300"
+      height="200"
       src="../assets/img/logo-design-banner-color.png"
     >
     </v-parallax>
