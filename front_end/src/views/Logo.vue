@@ -28,7 +28,9 @@
     <v-row align="center" justify="center">
       <v-container>
         <v-row no-gutters>
+          <Loading :isLoading="isLoading" />
           <LogoBox
+            v-show="!isLoading"
             cols="12"
             sm="3"
             v-for="logo in logos"
@@ -44,17 +46,20 @@
 <script>
 import axios from "axios";
 import LogoBox from "@/components/LogoBox.vue";
+import Loading from "@/components/Loading.vue";
 
 export default {
   name: "LogosList",
 
   components: {
     LogoBox,
+    Loading,
   },
 
   data() {
     return {
       logos: [],
+      isLoading: true,
     };
   },
 
@@ -69,6 +74,7 @@ export default {
         .get("/logos/")
         .then((response) => {
           this.logos = response.data;
+          this.isLoading = false;
         })
         .catch((error) => {
           console.log(error);
