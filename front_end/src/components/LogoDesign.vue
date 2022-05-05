@@ -14,7 +14,7 @@
           </p>
         </div>
         <div>
-          <v-btn to="/logo" class="mx-3" color="primary">Check it out</v-btn>
+          <v-btn to="/logo" class="mx-3" color="primary">Explore</v-btn>
           <v-btn
             href="https://www.fiverr.com/share/ylZj2A"
             target="_black"
