@@ -17,8 +17,10 @@
             href="https://www.fiverr.com/share/ylZj2A"
             target="_black"
             class="mx-3"
+            dark
             >Hire Me</v-btn
           >
+         <ContactForm /> 
         </v-col>
       </v-row>
     </v-parallax>
@@ -47,6 +49,7 @@
 import axios from "axios";
 import LogoBox from "@/components/LogoBox.vue";
 import Loading from "@/components/Loading.vue";
+import ContactForm from "@/components/ContactForm.vue";
 
 export default {
   name: "LogosList",
@@ -54,6 +57,7 @@ export default {
   components: {
     LogoBox,
     Loading,
+    ContactForm
   },
 
   data() {
