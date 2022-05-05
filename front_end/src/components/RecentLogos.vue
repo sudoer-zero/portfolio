@@ -1,6 +1,10 @@
 <template>
   <div>
     <v-row align="center" justify="center">
+      <v-chip class=""> Recent Logos </v-chip>
+    </v-row>
+    <Loading :isLoading="isLoading" />
+    <v-row v-show="!isLoading" align="center" justify="center">
       <v-container>
         <v-row no-gutters>
           <LogoBox
@@ -25,16 +29,19 @@
 <script>
 import axios from "axios";
 import LogoBox from "./LogoBox.vue";
+import Loading from "./Loading.vue";
 export default {
   name: "Recent-Logos",
 
   components: {
     LogoBox,
+    Loading,
   },
 
   data() {
     return {
       logos: [],
+      isLoading: true,
     };
   },
 
@@ -48,6 +55,7 @@ export default {
         .get("/logos/latest-logos")
         .then((response) => {
           this.logos = response.data;
+          this.isLoading = false;
         })
         .catch((error) => {
           console.log(error);
