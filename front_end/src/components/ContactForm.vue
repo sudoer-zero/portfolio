@@ -45,15 +45,14 @@
           </v-container>
           <v-card-actions>
             <small>*indicates required field</small>
-        <v-spacer></v-spacer>
-        <v-btn color="red darken-1" text @click="dialog = false"> Close </v-btn>
-        <v-btn color="primary" type="submit" > Send </v-btn>
-      </v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="red darken-1" text @click="dialog = false">
+              Close
+            </v-btn>
+            <v-btn color="primary" type="submit"> Send </v-btn>
+          </v-card-actions>
         </v-form>
-
-        
       </v-card-text>
-      
     </v-card>
   </v-dialog>
 </template>
@@ -65,22 +64,21 @@ export default {
   name: "Contact-Form",
 
   data: () => ({
-
     valid: false,
-    name: '',
+    name: "",
     nameRules: [
-      v => !!v || 'Name is required',
-      v => v.length <= 20 || 'Name must be less than 20 characters',
+      (v) => !!v || "Name is required",
+      (v) => v.length <= 20 || "Name must be less than 20 characters",
     ],
-    email: '',
+    email: "",
     emailRules: [
-      v => !!v || 'E-mail is required',
-      v => /.+@.+/.test(v) || 'E-mail must be valid',
+      (v) => !!v || "E-mail is required",
+      (v) => /.+@.+/.test(v) || "E-mail must be valid",
     ],
-    message: '',
+    message: "",
     messageRules: [
-      v => !!v || 'Message is required',
-      v => v.length <= 200 || 'Message must be less than 200 characters',
+      (v) => !!v || "Message is required",
+      (v) => v.length <= 200 || "Message must be less than 200 characters",
     ],
     dialog: false,
   }),
