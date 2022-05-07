@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import Logo from '../views/Logo.vue'
 import Blog from '../views/Blog.vue'
 import Work from '../views/Work.vue'
+import ArticleDetail from '../views/ArticleDetail'
 
 Vue.use(VueRouter)
 
@@ -28,6 +29,12 @@ const routes = [
     name: 'work',
     component: Work
   },
+  {
+    path: '/:article_slug',
+    name: 'ArticleDetail',
+    component: ArticleDetail
+  },
+  
 ]
 
 const router = new VueRouter({
