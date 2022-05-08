@@ -9,5 +9,8 @@ class Project(models.Model):
     status = models.CharField(max_length=100, blank=True)
     prog_lang = TaggableManager()
 
+    class Meta:
+        ordering = ['-status']
+
     def __str__(self):
         return self.name
