@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'users',
     'blogs',
     'logos',
+    'work',
     'theme',
 ]
 
