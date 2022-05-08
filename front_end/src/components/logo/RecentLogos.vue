@@ -20,7 +20,7 @@
     <v-parallax
       class="px-0"
       height="200"
-      src="../assets/img/logo-design-banner-color.png"
+      src="../../assets/img/logo-design-banner-color.png"
     >
     </v-parallax>
   </div>
@@ -29,7 +29,7 @@
 <script>
 import axios from "axios";
 import LogoBox from "./LogoBox.vue";
-import Loading from "./Loading.vue";
+import Loading from "@/components/Loading.vue";
 export default {
   name: "Recent-Logos",
 

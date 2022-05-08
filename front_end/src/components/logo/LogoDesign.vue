@@ -24,7 +24,7 @@
         </div>
       </v-col>
     </v-row>
-    <v-parallax class="px-0" height="200" src="../assets/img/logo-design-banner.png">
+    <v-parallax class="px-0" height="200" src="../../assets/img/logo-design-banner.png">
     </v-parallax>
   </div>
 </template>

@@ -47,7 +47,7 @@
 
 <script>
 import axios from "axios";
-import LogoBox from "@/components/LogoBox.vue";
+import LogoBox from "@/components/logo/LogoBox.vue";
 import Loading from "@/components/Loading.vue";
 import ContactForm from "@/components/ContactForm.vue";
 
