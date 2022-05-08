@@ -13,10 +13,10 @@
               <v-text class="mx-1">{{ creation_date }}</v-text>
             </v-row>
             <v-divider></v-divider>
-            <v-card class="mx-auto my-3" max-width="344">
-              <v-img :src="image" height="300px"></v-img>
+            <v-card class="mx-auto my-3">
+              <v-img :src="image" class="overflow-x-auto"></v-img>
             </v-card>
-            <VueShowdown :markdown="content" />
+            <VueShowdown :markdown="content" class="overflow-x-hidden" />
             <v-divider></v-divider>
             <div class="mx-auto mt-2">
               <v-row align="center" justify="center">
