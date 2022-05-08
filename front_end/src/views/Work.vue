@@ -52,15 +52,6 @@
                       project.status
                     }}</v-text>
                     <v-divider class="mx-2" vertical></v-divider>
-                    <v-chip
-                      small
-                      class="mr-1 hidden-sm-and-down"
-                      v-for="pl in project.prog_lang"
-                      :key="pl"
-                    >
-                      {{ pl }}
-                    </v-chip>
-
                     <v-btn
                       small
                       dark
@@ -79,11 +70,7 @@
                   <p class="grey--text">
                     {{ project.description }}
                   </p>
-                  <v-row
-                    class="py-4 hidden-md-and-up"
-                    align="center"
-                    justify="space-between"
-                  >
+                  <v-row class="py-4" align="center" justify="space-between">
                     <div class="mr-4">
                       <v-chip
                         small
@@ -94,10 +81,10 @@
                         {{ pl }}
                       </v-chip>
                     </div>
-                    <div class="mt-3">
+                    <div class="hidden-md-and-up">
                       <v-btn small dark :href="project.gh_url" target="_black">
                         <v-icon small>mdi-github</v-icon>
-                        Github Repo
+                        Repo
                       </v-btn>
                     </div>
                   </v-row>
