@@ -11,7 +11,7 @@
 import Hero from "@/components/Hero.vue";
 import LogoDesign from "@/components/logo/LogoDesign.vue";
 import RecentLogos from "@/components/logo/RecentLogos.vue";
-import RecentArticles from "@/components/RecentArticles.vue";
+import RecentArticles from "@/components/blog/RecentArticles.vue";
 export default {
   name: "HomeView",
 
