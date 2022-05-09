@@ -38,7 +38,7 @@
 
 <script>
 import axios from "axios";
-import ArticleBox from "@/components/ArticleBox.vue";
+import ArticleBox from "@/components/blog/ArticleBox.vue";
 import Loading from "@/components/Loading.vue";
 import ContactForm from "@/components/ContactForm.vue";
 import About from "@/components/About.vue";
