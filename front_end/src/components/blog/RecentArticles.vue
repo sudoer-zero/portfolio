@@ -24,7 +24,7 @@
 <script>
 import axios from "axios";
 import ArticleBox from "./ArticleBox.vue";
-import Loading from "./Loading.vue";
+import Loading from "@/components/Loading.vue";
 export default {
   name: "Recent-Articles",
 
