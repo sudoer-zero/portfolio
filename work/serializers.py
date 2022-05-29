@@ -12,6 +12,8 @@ class ProjectSerializer(TaggitSerializer, serializers.ModelSerializer):
             'id',
             'name',
             'description',
+            'readme_url',
+            'get_readme',
             'gh_url',
             'status',
             'prog_lang',
